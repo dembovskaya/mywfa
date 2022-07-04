@@ -1,4 +1,4 @@
-import {IDisplayedWeather, IWeather} from "../store/types.ts";
+import {IDisplayedWeather, IWeather} from "../store/types";
 
 type displayedDataType = (
   weather: IWeather,

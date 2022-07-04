@@ -34,7 +34,7 @@ const WeatherChart: FC = () => {
         },
       },
       fill: {
-        colors: ['#fff'],
+        colors: ['#fca311'],
         type: 'gradient',
       },
 
@@ -52,7 +52,7 @@ const WeatherChart: FC = () => {
       },
       stroke: {
         curve: 'smooth',
-        colors: ['#46c2ff'],
+        colors: ['#fca311'],
         width: 2,
       },
 

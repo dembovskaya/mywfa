@@ -8,23 +8,30 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import TimeLocal from "./timeLocal";
 import SearchBar from "./searchBar";
 import DegreesUnit from "./degreesUnit";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 const HeadBar: FC = () => {
   const isMobile = useMobile();
 
   return (
-    <AppBar color="primary">
+    <Box>
+    <AppBar sx={{bgcolor: '#14213d', color: '#fca311'}}>
       <Toolbar>
         <IconButton>
-          <LightModeIcon/>
+          <LightModeIcon sx={{color: '#fca311'}}/>
         </IconButton>
         {!isMobile && <Typography variant="h6">WEATHER FORECAST</Typography>}
         <SearchBar/>
+        <Grid sx={{px: 2}}>
         <DegreesUnit isCelUnit={true} unit={'°C'}/>
         <DegreesUnit isCelUnit={false} unit={'°F'}/>
-        <TimeLocal/>
+        </Grid>
+        {!isMobile &&
+          <TimeLocal/>}
       </Toolbar>
     </AppBar>
+      </Box>
   );
 };
 

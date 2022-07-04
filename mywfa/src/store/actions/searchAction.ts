@@ -1,7 +1,7 @@
 import axios from "axios";
 import {searchLocationSlice} from "../slices/searchSlice";
 import {AppDispatch} from "../index";
-import {IParams, ISearchLocation} from "../types.ts";
+import {IParams, ISearchLocation} from "../types";
 
 export const {
   fetchLocation,

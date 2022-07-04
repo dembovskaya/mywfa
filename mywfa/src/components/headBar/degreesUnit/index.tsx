@@ -11,7 +11,7 @@ const DegreesUnit: FC<NavbarItemProps> = ({isCelUnit, unit}) => {
   const dispatch = useAppDispatch();
 
   return (
-    <Button variant="outlined" color="success"
+    <Button variant="outlined"
             onClick={() => dispatch(selectTempUnit(isCelUnit))}
     >
       {unit}

@@ -2,11 +2,12 @@ import React, {FormEvent, useState} from "react";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import {useAppDispatch} from "../../../hooks";
+import {useAppDispatch, useMobile} from "../../../hooks";
 import {locationFetch, setSearchValue} from "../../../store/actions/searchAction";
 import {selectCity} from "../../../store/actions/weatherAction";
 
 const SearchBar = () => {
+  const isMobile = useMobile();
   const dispatch = useAppDispatch();
   const [city, setCity] = useState("");
 
@@ -35,9 +36,10 @@ const SearchBar = () => {
           value={city}
           onChange={changeHandler}
         />
+        {!isMobile &&
         <IconButton sx={{ color: "#FCA311" }}>
           <SearchIcon />
-        </IconButton>
+        </IconButton>}
       </form>
     </Grid>
   );

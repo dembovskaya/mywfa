@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {displayedData} from "../../conversion";
-import {IDisplayedWeather, IWeather} from "../types.ts";
+import {IDisplayedWeather, IWeather} from "../types";
 
 interface WeatherState {
   weather: IWeather;

@@ -1,7 +1,7 @@
 import axios from "axios";
 import {weatherSlice} from "../slices/weatherSlice";
 import {AppDispatch} from "../index";
-import {IParams, IWeather} from "../types.ts";
+import {IParams, IWeather} from "../types";
 
 export const {
   fetchWeather,
