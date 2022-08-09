@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { useAppDispatch } from '../../../hooks';
+import {useAppDispatch} from '../../../hooks';
 import {selectTempUnit} from "../../../store/actions/weatherAction";
-import {Button} from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 
 interface NavbarItemProps {
   isCelUnit: boolean;
@@ -9,13 +9,15 @@ interface NavbarItemProps {
 }
 const DegreesUnit: FC<NavbarItemProps> = ({isCelUnit, unit}) => {
   const dispatch = useAppDispatch();
+    if (isCelUnit) {
+      localStorage.setItem('cel', "C")} else
+    {
+      localStorage.removeItem('cel')
+    }
 
   return (
-    <Button variant="outlined"
-            onClick={() => dispatch(selectTempUnit(isCelUnit))}
-    >
-      {unit}
-    </Button>
+    <IconButton color="inherit" onClick={() => dispatch(selectTempUnit(isCelUnit))}>{unit}
+    </IconButton>
   );
 };
 

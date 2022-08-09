@@ -17,8 +17,8 @@ const initialState: WeatherState = {
   displayedWeather: {},
   isCel: true,
   loading: false,
-  city: 'Minsk',
-  forecastDetails: 'summary',
+  city: '',
+  forecastDetails: '',
   error: '',
 }
 
@@ -51,6 +51,7 @@ export const weatherSlice = createSlice({
         state.isCel,
         state.displayedWeather.forecast?.dayOfForecast
       );
+
     },
     fetchWeatherError(state, action: PayloadAction<string>){
       state.loading = false;

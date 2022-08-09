@@ -31,13 +31,12 @@ const WeatherForecast: FC<DailyForecastProps> = ({date, day}) => {
   ];
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <Box sx={{ bgcolor: 'background.paper' }}>
       <List>
         {list.map(({ icon, date, maxTemp, minTemp }, index) => (
           <ListItem key={index}>
             <ListItemIcon>{icon}</ListItemIcon>
-            <ListItemText>{date}</ListItemText>
-            <ListItemText>{maxTemp}/{minTemp}</ListItemText>
+            <ListItemText primary={`${maxTemp} | ${minTemp}`} secondary={date}>{date}</ListItemText>
           </ListItem>
         ))}
       </List>
